@@ -1,6 +1,6 @@
 package com.manong.controller;
 
-import com.manong.pojo.User;
+import com.manong.mapper.pojo.User;
 import com.manong.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

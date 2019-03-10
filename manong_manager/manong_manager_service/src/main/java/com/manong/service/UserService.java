@@ -1,6 +1,6 @@
 package com.manong.service;
 
-import com.manong.pojo.User;
+import com.manong.mapper.pojo.User;
 
 /**
  * create by: dejavu111
