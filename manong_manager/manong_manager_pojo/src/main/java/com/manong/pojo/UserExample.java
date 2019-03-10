@@ -1,4 +1,4 @@
-package com.manong.mapper.pojo;
+package com.manong.pojo;
 
 import java.util.ArrayList;
 import java.util.List;

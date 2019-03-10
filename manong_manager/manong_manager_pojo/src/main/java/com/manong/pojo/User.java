@@ -1,4 +1,4 @@
-package com.manong.mapper.pojo;
+package com.manong.pojo;
 
 public class User {
     private Integer id;

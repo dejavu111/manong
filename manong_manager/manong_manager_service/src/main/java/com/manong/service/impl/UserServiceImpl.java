@@ -1,8 +1,8 @@
 package com.manong.service.impl;
 
 import com.manong.mapper.UserMapper;
-import com.manong.mapper.pojo.User;
-import com.manong.mapper.pojo.UserExample;
+import com.manong.pojo.User;
+import com.manong.pojo.UserExample;
 import com.manong.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
