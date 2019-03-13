@@ -1,4 +1,4 @@
-package pojo;
+package com.manong.pojo;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -364,63 +364,63 @@ public class ProductExample {
             return (Criteria) this;
         }
 
-        public Criteria andMarketPriceIsNull() {
-            addCriterion("market_price is null");
+        public Criteria andMaketPriceIsNull() {
+            addCriterion("maket_price is null");
             return (Criteria) this;
         }
 
-        public Criteria andMarketPriceIsNotNull() {
-            addCriterion("market_price is not null");
+        public Criteria andMaketPriceIsNotNull() {
+            addCriterion("maket_price is not null");
             return (Criteria) this;
         }
 
-        public Criteria andMarketPriceEqualTo(Long value) {
-            addCriterion("market_price =", value, "marketPrice");
+        public Criteria andMaketPriceEqualTo(Long value) {
+            addCriterion("maket_price =", value, "maketPrice");
             return (Criteria) this;
         }
 
-        public Criteria andMarketPriceNotEqualTo(Long value) {
-            addCriterion("market_price <>", value, "marketPrice");
+        public Criteria andMaketPriceNotEqualTo(Long value) {
+            addCriterion("maket_price <>", value, "maketPrice");
             return (Criteria) this;
         }
 
-        public Criteria andMarketPriceGreaterThan(Long value) {
-            addCriterion("market_price >", value, "marketPrice");
+        public Criteria andMaketPriceGreaterThan(Long value) {
+            addCriterion("maket_price >", value, "maketPrice");
             return (Criteria) this;
         }
 
-        public Criteria andMarketPriceGreaterThanOrEqualTo(Long value) {
-            addCriterion("market_price >=", value, "marketPrice");
+        public Criteria andMaketPriceGreaterThanOrEqualTo(Long value) {
+            addCriterion("maket_price >=", value, "maketPrice");
             return (Criteria) this;
         }
 
-        public Criteria andMarketPriceLessThan(Long value) {
-            addCriterion("market_price <", value, "marketPrice");
+        public Criteria andMaketPriceLessThan(Long value) {
+            addCriterion("maket_price <", value, "maketPrice");
             return (Criteria) this;
         }
 
-        public Criteria andMarketPriceLessThanOrEqualTo(Long value) {
-            addCriterion("market_price <=", value, "marketPrice");
+        public Criteria andMaketPriceLessThanOrEqualTo(Long value) {
+            addCriterion("maket_price <=", value, "maketPrice");
             return (Criteria) this;
         }
 
-        public Criteria andMarketPriceIn(List<Long> values) {
-            addCriterion("market_price in", values, "marketPrice");
+        public Criteria andMaketPriceIn(List<Long> values) {
+            addCriterion("maket_price in", values, "maketPrice");
             return (Criteria) this;
         }
 
-        public Criteria andMarketPriceNotIn(List<Long> values) {
-            addCriterion("market_price not in", values, "marketPrice");
+        public Criteria andMaketPriceNotIn(List<Long> values) {
+            addCriterion("maket_price not in", values, "maketPrice");
             return (Criteria) this;
         }
 
-        public Criteria andMarketPriceBetween(Long value1, Long value2) {
-            addCriterion("market_price between", value1, value2, "marketPrice");
+        public Criteria andMaketPriceBetween(Long value1, Long value2) {
+            addCriterion("maket_price between", value1, value2, "maketPrice");
             return (Criteria) this;
         }
 
-        public Criteria andMarketPriceNotBetween(Long value1, Long value2) {
-            addCriterion("market_price not between", value1, value2, "marketPrice");
+        public Criteria andMaketPriceNotBetween(Long value1, Long value2) {
+            addCriterion("maket_price not between", value1, value2, "maketPrice");
             return (Criteria) this;
         }
 

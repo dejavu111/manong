@@ -12,6 +12,13 @@
 <div data-options="region:'west',title:'菜单',split:true,minWidth:180" style="width:100px;">
     <ul id="tt" class="easyui-tree">
         <li>
+            <span>商品分类管理</span>
+            <ul>
+                <li data-options="attributes:{'url':'product_cat_list'}">商品分类列表</li>
+            </ul>
+        </li>
+
+        <li>
             <span>商品管理</span>
             <ul>
                 <li data-options="attributes:{'url':'product_list'}">商品列表</li>

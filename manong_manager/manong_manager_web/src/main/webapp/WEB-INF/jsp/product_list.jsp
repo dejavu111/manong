@@ -20,12 +20,7 @@
     </tr>
     </thead>
     <tbody>
-    <tr>
-        <td>001</td><td>name1</td><td>2323</td>
-    </tr>
-    <tr>
-        <td>002</td><td>name2</td><td>4612</td>
-    </tr>
+
     </tbody>
 </table>
 </body>

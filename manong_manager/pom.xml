@@ -9,12 +9,11 @@
         <relativePath>../manong_parent/pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-
     <artifactId>manong_manager</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>manong_manager_mapper</module>
         <module>manong_manager_pojo</module>
+        <module>manong_manager_mapper</module>
         <module>manong_manager_service</module>
         <module>manong_manager_web</module>
     </modules>
@@ -31,5 +30,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>

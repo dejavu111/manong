@@ -1,15 +1,15 @@
-package pojo;
+package com.manong.pojo;
 
 public class ProductCategory {
     private Short id;
 
     private String name;
 
-    private Short sorderorder;
+    private Short sorderorder = 999;
 
-    private Byte status;
+    private Byte status = 0;
 
-    private Byte parentId;
+    private Short parentId = 0;
 
     public Short getId() {
         return id;
@@ -43,11 +43,11 @@ public class ProductCategory {
         this.status = status;
     }
 
-    public Byte getParentId() {
+    public Short getParentId() {
         return parentId;
     }
 
-    public void setParentId(Byte parentId) {
+    public void setParentId(Short parentId) {
         this.parentId = parentId;
     }
 }

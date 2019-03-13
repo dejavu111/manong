@@ -1,4 +1,4 @@
-package pojo;
+package com.manong.pojo;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -364,52 +364,52 @@ public class ProductCategoryExample {
             return (Criteria) this;
         }
 
-        public Criteria andParentIdEqualTo(Byte value) {
+        public Criteria andParentIdEqualTo(Short value) {
             addCriterion("parent_id =", value, "parentId");
             return (Criteria) this;
         }
 
-        public Criteria andParentIdNotEqualTo(Byte value) {
+        public Criteria andParentIdNotEqualTo(Short value) {
             addCriterion("parent_id <>", value, "parentId");
             return (Criteria) this;
         }
 
-        public Criteria andParentIdGreaterThan(Byte value) {
+        public Criteria andParentIdGreaterThan(Short value) {
             addCriterion("parent_id >", value, "parentId");
             return (Criteria) this;
         }
 
-        public Criteria andParentIdGreaterThanOrEqualTo(Byte value) {
+        public Criteria andParentIdGreaterThanOrEqualTo(Short value) {
             addCriterion("parent_id >=", value, "parentId");
             return (Criteria) this;
         }
 
-        public Criteria andParentIdLessThan(Byte value) {
+        public Criteria andParentIdLessThan(Short value) {
             addCriterion("parent_id <", value, "parentId");
             return (Criteria) this;
         }
 
-        public Criteria andParentIdLessThanOrEqualTo(Byte value) {
+        public Criteria andParentIdLessThanOrEqualTo(Short value) {
             addCriterion("parent_id <=", value, "parentId");
             return (Criteria) this;
         }
 
-        public Criteria andParentIdIn(List<Byte> values) {
+        public Criteria andParentIdIn(List<Short> values) {
             addCriterion("parent_id in", values, "parentId");
             return (Criteria) this;
         }
 
-        public Criteria andParentIdNotIn(List<Byte> values) {
+        public Criteria andParentIdNotIn(List<Short> values) {
             addCriterion("parent_id not in", values, "parentId");
             return (Criteria) this;
         }
 
-        public Criteria andParentIdBetween(Byte value1, Byte value2) {
+        public Criteria andParentIdBetween(Short value1, Short value2) {
             addCriterion("parent_id between", value1, value2, "parentId");
             return (Criteria) this;
         }
 
-        public Criteria andParentIdNotBetween(Byte value1, Byte value2) {
+        public Criteria andParentIdNotBetween(Short value1, Short value2) {
             addCriterion("parent_id not between", value1, value2, "parentId");
             return (Criteria) this;
         }

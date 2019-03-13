@@ -1,12 +1,13 @@
-package mapper;
+package com.manong.mapper;
+
+import com.manong.pojo.Product;
+import com.manong.pojo.ProductExample;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
-import org.apache.ibatis.annotations.Param;
-import pojo.Product;
-import pojo.ProductExample;
 
 public interface ProductMapper {
-    long countByExample(ProductExample example);
+    int countByExample(ProductExample example);
 
     int deleteByExample(ProductExample example);
 

@@ -1,4 +1,4 @@
-package pojo;
+package com.manong.pojo;
 
 public class Product {
     private Integer id;
@@ -9,7 +9,7 @@ public class Product {
 
     private String image;
 
-    private Long marketPrice;
+    private Long maketPrice;
 
     private Long price;
 
@@ -51,12 +51,12 @@ public class Product {
         this.image = image == null ? null : image.trim();
     }
 
-    public Long getMarketPrice() {
-        return marketPrice;
+    public Long getMaketPrice() {
+        return maketPrice;
     }
 
-    public void setMarketPrice(Long marketPrice) {
-        this.marketPrice = marketPrice;
+    public void setMaketPrice(Long maketPrice) {
+        this.maketPrice = maketPrice;
     }
 
     public Long getPrice() {
