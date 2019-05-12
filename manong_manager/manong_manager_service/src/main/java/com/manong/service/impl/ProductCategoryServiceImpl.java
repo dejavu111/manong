@@ -7,6 +7,7 @@ import com.manong.service.ProductCategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pojo.EasyUITree;
+import pojo.ResponseJsonResult;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,11 +26,11 @@ public class ProductCategoryServiceImpl implements ProductCategoryService {
     private ProductCategoryMapper productCategoryMapper;
 
     @Override
-    public List<EasyUITree> findProductCategoryListByParentId(Short parentid) {
+    public List<EasyUITree> findProductCategoryListById(Short id) {
 
         ProductCategoryExample productCategoryExample = new ProductCategoryExample();
         ProductCategoryExample.Criteria criteria = productCategoryExample.createCriteria();
-        criteria.andParentIdEqualTo(parentid);
+        criteria.andParentIdEqualTo(id);
         List<ProductCategory> productCategoryList = productCategoryMapper.selectByExample(productCategoryExample);
 
         List<EasyUITree> easyUITrees = new ArrayList<>(productCategoryList.size());
@@ -41,12 +42,47 @@ public class ProductCategoryServiceImpl implements ProductCategoryService {
             easyuiTree.setId(productCategory.getId());
             easyuiTree.setText(productCategory.getName());
             easyuiTree.setState(productCategory.getParentId()==0?"closed":"open");
-//            easyuiTree.setAttributes(productCategory.getParentId()+"");
+            easyuiTree.setAttributes(productCategory.getParentId()+"");
 
             easyUITrees.add(easyuiTree);
         }
 
         return easyUITrees;
+    }
+
+    @Override
+    public ResponseJsonResult addCategory(Short id, String name) {
+        ProductCategory productCategory = new ProductCategory();
+        productCategory.setParentId(id);
+        productCategory.setName(name);
+
+        productCategoryMapper.insert(productCategory);
+
+        ResponseJsonResult responseJsonResult = new ResponseJsonResult();
+        responseJsonResult.setMsg(productCategory.getId() + "");
+        return responseJsonResult;
+    }
+
+    @Override
+    public ResponseJsonResult deleteCatagory(Short parentId, Short id) {
+
+        ProductCategoryExample productCategoryExample = new ProductCategoryExample();
+        ProductCategoryExample.Criteria criteria = productCategoryExample.createCriteria();
+
+        if(parentId == 0) {
+            criteria.andIdEqualTo(id);
+
+            ProductCategoryExample.Criteria criteria1 = productCategoryExample.createCriteria();
+            criteria1.andParentIdEqualTo(id);
+            productCategoryExample.or(criteria1);
+        }else{
+            criteria.andIdEqualTo(id);
+        }
+        productCategoryMapper.deleteByExample(productCategoryExample);
+        ResponseJsonResult responseJsonResult = new ResponseJsonResult();
+        responseJsonResult.setStatus(200);
+        responseJsonResult.setMsg("success");
+        return responseJsonResult;
     }
 
 

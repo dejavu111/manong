@@ -12,6 +12,18 @@ public class EasyUITree {
     private String text;
     private String state;
 
+    public String getAttributes() {
+        return attributes;
+    }
+
+    public void setAttributes(String attributes) {
+        this.attributes = attributes;
+    }
+
+    private String attributes;
+
+
+
     public int getId() {
         return id;
     }

@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import pojo.EasyUITree;
+import pojo.ResponseJsonResult;
 
 import java.util.List;
 
@@ -30,9 +31,30 @@ public class ProductCategoryController {
     @RequestMapping("/list")
     @ResponseBody
     public List<EasyUITree> getProductCategoryByParentId(@RequestParam(value = "id", defaultValue = "0") Short
-                                                                 parentId) {
-        List<EasyUITree> easyUITrees = productCategoryService.findProductCategoryListByParentId(parentId);
+                                                                 id) {
+        List<EasyUITree> easyUITrees = productCategoryService.findProductCategoryListById(id);
         return easyUITrees;
     }
 
+
+    /**
+     * 添加分类
+     */
+    @RequestMapping("/add")
+    @ResponseBody
+    public ResponseJsonResult addCategory(Short parentId, String name) {
+        ResponseJsonResult responseJsonResult = productCategoryService.addCategory(parentId, name);
+        return responseJsonResult;
+    }
+
+    /**
+     * 删除分类
+     */
+    @RequestMapping("/del")
+    @ResponseBody
+    public ResponseJsonResult delCategory(Short parentId, Short id) {
+        ResponseJsonResult responseJsonResult = productCategoryService.deleteCatagory(parentId,id);
+        return responseJsonResult;
+
+    }
 }
