@@ -9,7 +9,7 @@ public class Product {
 
     private String image;
 
-    private Long maketPrice;
+    private Long marketPrice;
 
     private Long price;
 
@@ -51,12 +51,12 @@ public class Product {
         this.image = image == null ? null : image.trim();
     }
 
-    public Long getMaketPrice() {
-        return maketPrice;
+    public Long getMarketPrice() {
+        return marketPrice;
     }
 
-    public void setMaketPrice(Long maketPrice) {
-        this.maketPrice = maketPrice;
+    public void setMarketPrice(Long marketPrice) {
+        this.marketPrice = marketPrice;
     }
 
     public Long getPrice() {

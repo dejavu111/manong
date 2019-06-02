@@ -6,7 +6,7 @@
     <result column="category_id" property="categoryId" jdbcType="SMALLINT" />
     <result column="name" property="name" jdbcType="VARCHAR" />
     <result column="image" property="image" jdbcType="VARCHAR" />
-    <result column="maket_price" property="maketPrice" jdbcType="DECIMAL" />
+    <result column="market_price" property="marketPrice" jdbcType="DECIMAL" />
     <result column="price" property="price" jdbcType="DECIMAL" />
     <result column="status" property="status" jdbcType="TINYINT" />
     <result column="description" property="description" jdbcType="VARCHAR" />
@@ -71,7 +71,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    id, category_id, name, image, maket_price, price, status, description, product_number
+    id, category_id, name, image, market_price, price, status, description, product_number
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.manong.pojo.ProductExample" >
     select
@@ -105,11 +105,11 @@
   </delete>
   <insert id="insert" parameterType="com.manong.pojo.Product" >
     insert into product (id, category_id, name, 
-      image, maket_price, price, 
+      image, market_price, price,
       status, description, product_number
       )
     values (#{id,jdbcType=INTEGER}, #{categoryId,jdbcType=SMALLINT}, #{name,jdbcType=VARCHAR}, 
-      #{image,jdbcType=VARCHAR}, #{maketPrice,jdbcType=DECIMAL}, #{price,jdbcType=DECIMAL}, 
+      #{image,jdbcType=VARCHAR}, #{marketPrice,jdbcType=DECIMAL}, #{price,jdbcType=DECIMAL},
       #{status,jdbcType=TINYINT}, #{description,jdbcType=VARCHAR}, #{productNumber,jdbcType=VARCHAR}
       )
   </insert>
@@ -128,8 +128,8 @@
       <if test="image != null" >
         image,
       </if>
-      <if test="maketPrice != null" >
-        maket_price,
+      <if test="marketPrice != null" >
+        market_price,
       </if>
       <if test="price != null" >
         price,
@@ -157,8 +157,8 @@
       <if test="image != null" >
         #{image,jdbcType=VARCHAR},
       </if>
-      <if test="maketPrice != null" >
-        #{maketPrice,jdbcType=DECIMAL},
+      <if test="marketPrice != null" >
+        #{marketPrice,jdbcType=DECIMAL},
       </if>
       <if test="price != null" >
         #{price,jdbcType=DECIMAL},
@@ -195,8 +195,8 @@
       <if test="record.image != null" >
         image = #{record.image,jdbcType=VARCHAR},
       </if>
-      <if test="record.maketPrice != null" >
-        maket_price = #{record.maketPrice,jdbcType=DECIMAL},
+      <if test="record.marketPrice != null" >
+        market_price = #{record.marketPrice,jdbcType=DECIMAL},
       </if>
       <if test="record.price != null" >
         price = #{record.price,jdbcType=DECIMAL},
@@ -221,7 +221,7 @@
       category_id = #{record.categoryId,jdbcType=SMALLINT},
       name = #{record.name,jdbcType=VARCHAR},
       image = #{record.image,jdbcType=VARCHAR},
-      maket_price = #{record.maketPrice,jdbcType=DECIMAL},
+      market_price = #{record.marketPrice,jdbcType=DECIMAL},
       price = #{record.price,jdbcType=DECIMAL},
       status = #{record.status,jdbcType=TINYINT},
       description = #{record.description,jdbcType=VARCHAR},
@@ -242,8 +242,8 @@
       <if test="image != null" >
         image = #{image,jdbcType=VARCHAR},
       </if>
-      <if test="maketPrice != null" >
-        maket_price = #{maketPrice,jdbcType=DECIMAL},
+      <if test="marketPrice != null" >
+        market_price = #{marketPrice,jdbcType=DECIMAL},
       </if>
       <if test="price != null" >
         price = #{price,jdbcType=DECIMAL},
@@ -265,7 +265,7 @@
     set category_id = #{categoryId,jdbcType=SMALLINT},
       name = #{name,jdbcType=VARCHAR},
       image = #{image,jdbcType=VARCHAR},
-      maket_price = #{maketPrice,jdbcType=DECIMAL},
+      market_price = #{marketPrice,jdbcType=DECIMAL},
       price = #{price,jdbcType=DECIMAL},
       status = #{status,jdbcType=TINYINT},
       description = #{description,jdbcType=VARCHAR},

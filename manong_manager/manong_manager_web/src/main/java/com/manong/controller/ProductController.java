@@ -1,7 +1,12 @@
 package com.manong.controller;
 
+import com.manong.pojo.Product;
+import com.manong.service.ProductService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import pojo.ResponseJsonResult;
 
 /**
  * @author ：dejavu111
@@ -12,8 +17,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @Controller
 public class ProductController {
-    @RequestMapping("product_list")
+    @Autowired
+    ProductService productService;
+    @RequestMapping("/product_list")
     public String listProduct(){
         return "product_list";
+    }
+
+    @RequestMapping("/product_save")
+    @ResponseBody
+    public ResponseJsonResult saveProduct(Product product) {
+        product.getId();
+        return productService.saveProduct(product);
     }
 }

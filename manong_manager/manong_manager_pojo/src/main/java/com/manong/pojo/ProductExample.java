@@ -364,63 +364,63 @@ public class ProductExample {
             return (Criteria) this;
         }
 
-        public Criteria andMaketPriceIsNull() {
+        public Criteria andMarketPriceIsNull() {
             addCriterion("maket_price is null");
             return (Criteria) this;
         }
 
-        public Criteria andMaketPriceIsNotNull() {
+        public Criteria andMarketPriceIsNotNull() {
             addCriterion("maket_price is not null");
             return (Criteria) this;
         }
 
-        public Criteria andMaketPriceEqualTo(Long value) {
-            addCriterion("maket_price =", value, "maketPrice");
+        public Criteria andMarketPriceEqualTo(Long value) {
+            addCriterion("maket_price =", value, "marketPrice");
             return (Criteria) this;
         }
 
-        public Criteria andMaketPriceNotEqualTo(Long value) {
-            addCriterion("maket_price <>", value, "maketPrice");
+        public Criteria andMarketPriceNotEqualTo(Long value) {
+            addCriterion("maket_price <>", value, "marketPrice");
             return (Criteria) this;
         }
 
-        public Criteria andMaketPriceGreaterThan(Long value) {
-            addCriterion("maket_price >", value, "maketPrice");
+        public Criteria andMarketPriceGreaterThan(Long value) {
+            addCriterion("maket_price >", value, "marketPrice");
             return (Criteria) this;
         }
 
-        public Criteria andMaketPriceGreaterThanOrEqualTo(Long value) {
-            addCriterion("maket_price >=", value, "maketPrice");
+        public Criteria andMarketPriceGreaterThanOrEqualTo(Long value) {
+            addCriterion("maket_price >=", value, "marketPrice");
             return (Criteria) this;
         }
 
-        public Criteria andMaketPriceLessThan(Long value) {
-            addCriterion("maket_price <", value, "maketPrice");
+        public Criteria andMarketPriceLessThan(Long value) {
+            addCriterion("maket_price <", value, "marketPrice");
             return (Criteria) this;
         }
 
-        public Criteria andMaketPriceLessThanOrEqualTo(Long value) {
-            addCriterion("maket_price <=", value, "maketPrice");
+        public Criteria andMarketPriceLessThanOrEqualTo(Long value) {
+            addCriterion("maket_price <=", value, "marketPrice");
             return (Criteria) this;
         }
 
-        public Criteria andMaketPriceIn(List<Long> values) {
-            addCriterion("maket_price in", values, "maketPrice");
+        public Criteria andMarketPriceIn(List<Long> values) {
+            addCriterion("maket_price in", values, "marketPrice");
             return (Criteria) this;
         }
 
-        public Criteria andMaketPriceNotIn(List<Long> values) {
-            addCriterion("maket_price not in", values, "maketPrice");
+        public Criteria andMarketPriceNotIn(List<Long> values) {
+            addCriterion("maket_price not in", values, "marketPrice");
             return (Criteria) this;
         }
 
-        public Criteria andMaketPriceBetween(Long value1, Long value2) {
-            addCriterion("maket_price between", value1, value2, "maketPrice");
+        public Criteria andMarketPriceBetween(Long value1, Long value2) {
+            addCriterion("maket_price between", value1, value2, "marketPrice");
             return (Criteria) this;
         }
 
-        public Criteria andMaketPriceNotBetween(Long value1, Long value2) {
-            addCriterion("maket_price not between", value1, value2, "maketPrice");
+        public Criteria andMarketPriceNotBetween(Long value1, Long value2) {
+            addCriterion("maket_price not between", value1, value2, "marketPrice");
             return (Criteria) this;
         }
 

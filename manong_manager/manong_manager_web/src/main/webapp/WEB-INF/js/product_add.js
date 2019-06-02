@@ -47,20 +47,21 @@ var MN = MANONG ={
         });
     },
 
-    initPicUpload: function() {
+    initPicUpload: function () {
         $("#fileName").filebox({
-            prompt: "选择图片",
-            width: "200",
-            buttonText: "浏览",
-            });
+            prompt:"选择图片",
+            width:"200",
+            buttonText:"浏览",
+        });
+
         $(".uploadPic").click(function () {
             $.ajaxFileUpload({
-                url:"/uploadfile",
-                fileElementId:"filebox_file_id_1",
-                type:"post",
+                url:'/uploadfile',
+                fileElementId:'filebox_file_id_1',
+                type:'post',
                 success:function (data) {
-                    console.log($(data).find("body").text())
-                    $("#img").attr("src","http://188.131.252.159:8888/"+$(data).find("body").text())
+                    $("#img").attr("src","http://188.131.252.159:8888/" + $(data).find("body").text());
+                    $("#productAddForm").find("input[name='image']").val($(data).find("body").text());
                 }
             });
         });
