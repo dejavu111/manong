@@ -38,6 +38,7 @@
         <servlet-api>2.4</servlet-api>
         <astjson.version>1.2.54</astjson.version>
         <jedis.version>2.9.0</jedis.version>
+        <pagehelper.version>4.1.1</pagehelper.version>
     </properties>
 
     <dependencyManagement>
@@ -199,7 +200,11 @@
                 <artifactId>spring-data-redis</artifactId>
                 <version>1.7.1.RELEASE</version>
             </dependency>
-
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper</artifactId>
+                <version>${pagehelper.version}</version>
+            </dependency>
 
         </dependencies>
     </dependencyManagement>
